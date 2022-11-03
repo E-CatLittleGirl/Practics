@@ -50,7 +50,7 @@
             <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                 <Button x:Name="ReceiptOfMaterial"  Click="ReceiptOfMaterial_Click" Content="Поступление материалов" HorizontalAlignment="Center" Style="{StaticResource OrdinaryBtn}"/>
                 <Button Content="Список тканей" Style="{StaticResource OrdinaryBtn}" FontSize="18" x:Name="Listfabric" Click="Listfabric_Click"/>
-                <Button Content="Список из фурнитуры" Style="{StaticResource OrdinaryBtn} " x:Name="ListFurniche" Click="ListFurniche_Click"/>
+                <Button Content="Список из фурнитуры" Style="{StaticResource OrdinaryBtn}"  x:Name="ListFurniche" Click="ListFurniche_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

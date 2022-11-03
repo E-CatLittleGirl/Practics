@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f72b50ca4bcc47e4bd1c0957fd91c081" Name="Diagram1">
+        <EntityTypeShape EntityType="db_scriptModel.color" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.cutting" Width="1.5" PointX="5.25" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.drawing" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.fabric_color" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.fabric_drawing" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.fabric_structure" Width="1.5" PointX="3" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.fabric_warehouse" Width="1.5" PointX="3" PointY="15.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.fabric" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.fabrics_product" Width="1.5" PointX="6" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.furniture_type" Width="1.5" PointX="11" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.furniture_warehouse" Width="1.5" PointX="11" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.furniture" Width="1.5" PointX="8.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.furnitures_product" Width="1.5" PointX="11" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.order" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.product" Width="1.5" PointX="3.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.structure" Width="1.5" PointX="0.75" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.type" Width="1.5" PointX="8.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_scriptModel.user" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
+        <AssociationConnector Association="db_scriptModel.FK_fabric_color_colors" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_cutting_fabric_warehouse" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_cutting_orders" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_fabric_drawing_drawings" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_fabric_color_fabrics" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_fabric_drawing_fabrics1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_fabric_structure_fabrics1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_fabric_structure_structures" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_fabric_warehouse_fabrics" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_fabrics_product_fabrics" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_fabrics_product_products" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_furniture_type_furnitures" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_furniture_type_type" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_furniture_warehouse_furnitures" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_furnitures_product_furnitures" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_furnitures_product_products" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_orders_products" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_orders_users" ManuallyRouted="false" />
+        <AssociationConnector Association="db_scriptModel.FK_orders_users1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

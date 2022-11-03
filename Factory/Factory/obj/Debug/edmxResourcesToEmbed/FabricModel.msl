@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище Sewing_FactoryModelContainer" CdmEntityContainer="Sewing_FactoryEntities">
+    <EntitySetMapping Name="Clothes">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Cloth">
+        <MappingFragment StoreEntitySet="Cloth">
+          <ScalarProperty Name="id_cloth" ColumnName="id_cloth" />
+          <ScalarProperty Name="name_cloth" ColumnName="name_cloth" />
+          <ScalarProperty Name="width" ColumnName="width" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cloth_color">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Cloth_color">
+        <MappingFragment StoreEntitySet="Cloth-color">
+          <ScalarProperty Name="id_cloth" ColumnName="id_cloth" />
+          <ScalarProperty Name="id_color" ColumnName="id_color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cloth_compound">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Cloth_compound">
+        <MappingFragment StoreEntitySet="Cloth-compound">
+          <ScalarProperty Name="id_cloth" ColumnName="id_cloth" />
+          <ScalarProperty Name="id_compound" ColumnName="id_compound" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cloth_picture">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Cloth_picture">
+        <MappingFragment StoreEntitySet="Cloth-picture">
+          <ScalarProperty Name="id_cloth" ColumnName="id_cloth" />
+          <ScalarProperty Name="id_picture" ColumnName="id_picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Colors">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Color">
+        <MappingFragment StoreEntitySet="Color">
+          <ScalarProperty Name="id_color" ColumnName="id_color" />
+          <ScalarProperty Name="name_color" ColumnName="name_color" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compounds">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Compound">
+        <MappingFragment StoreEntitySet="Compound">
+          <ScalarProperty Name="id_compound" ColumnName="id_compound" />
+          <ScalarProperty Name="name_compound" ColumnName="name_compound" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hardwares">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Hardware">
+        <MappingFragment StoreEntitySet="Hardware">
+          <ScalarProperty Name="id_hardware" ColumnName="id_hardware" />
+          <ScalarProperty Name="name_hardware" ColumnName="name_hardware" />
+          <ScalarProperty Name="width" ColumnName="width" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="weight" ColumnName="weight" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hardware_type_hardware">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Hardware_type_hardware">
+        <MappingFragment StoreEntitySet="Hardware-type_hardware">
+          <ScalarProperty Name="id_hardware" ColumnName="id_hardware" />
+          <ScalarProperty Name="id_type_hardware" ColumnName="id_type_hardware" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Items">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Item">
+        <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="id_items" ColumnName="id_items" />
+          <ScalarProperty Name="name_items" ColumnName="name_items" />
+          <ScalarProperty Name="width" ColumnName="width" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="hardware" ColumnName="hardware" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordered_items">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Ordered_items">
+        <MappingFragment StoreEntitySet="Ordered_items">
+          <ScalarProperty Name="id_ordered_items" ColumnName="id_ordered_items" />
+          <ScalarProperty Name="name_items" ColumnName="name_items" />
+          <ScalarProperty Name="width" ColumnName="width" />
+          <ScalarProperty Name="length" ColumnName="length" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordered_items_roll">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Ordered_items_roll">
+        <MappingFragment StoreEntitySet="Ordered_items-roll">
+          <ScalarProperty Name="id_ordered_items" ColumnName="id_ordered_items" />
+          <ScalarProperty Name="id_roll" ColumnName="id_roll" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Order">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="id_orders" ColumnName="id_orders" />
+          <ScalarProperty Name="data" ColumnName="data" />
+          <ScalarProperty Name="execution_stage" ColumnName="execution_stage" />
+          <ScalarProperty Name="customer" ColumnName="customer" />
+          <ScalarProperty Name="manager" ColumnName="manager" />
+          <ScalarProperty Name="price" ColumnName="price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pictures">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Picture">
+        <MappingFragment StoreEntitySet="Picture">
+          <ScalarProperty Name="id_picture" ColumnName="id_picture" />
+          <ScalarProperty Name="name_picture" ColumnName="name_picture" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Rolls">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Roll">
+        <MappingFragment StoreEntitySet="Roll">
+          <ScalarProperty Name="id_roll" ColumnName="id_roll" />
+          <ScalarProperty Name="id_compound" ColumnName="id_compound" />
+          <ScalarProperty Name="id_color" ColumnName="id_color" />
+          <ScalarProperty Name="widht" ColumnName="widht" />
+          <ScalarProperty Name="length" ColumnName="length" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type_hardware">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.Type_hardware">
+        <MappingFragment StoreEntitySet="Type_hardware">
+          <ScalarProperty Name="id_type_hardware" ColumnName="id_type_hardware" />
+          <ScalarProperty Name="name_type_hardware" ColumnName="name_type_hardware" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Sewing_FactoryModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="role" ColumnName="role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

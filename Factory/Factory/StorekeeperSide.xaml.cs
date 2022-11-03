@@ -21,7 +21,7 @@ namespace Factory
     {
         public StorekeeperSide()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
 
         private void Back_Click(object sender, RoutedEventArgs e)

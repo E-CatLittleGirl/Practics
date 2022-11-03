@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Sewing_FactoryModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Cloth">
+    <Key>
+      <PropertyRef Name="id_cloth" />
+    </Key>
+    <Property Name="id_cloth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_cloth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="width" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="length" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Cloth_color">
+    <Key>
+      <PropertyRef Name="id_cloth" />
+      <PropertyRef Name="id_color" />
+    </Key>
+    <Property Name="id_cloth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_color" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cloth_compound">
+    <Key>
+      <PropertyRef Name="id_cloth" />
+      <PropertyRef Name="id_compound" />
+    </Key>
+    <Property Name="id_cloth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_compound" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cloth_picture">
+    <Key>
+      <PropertyRef Name="id_cloth" />
+      <PropertyRef Name="id_picture" />
+    </Key>
+    <Property Name="id_cloth" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_picture" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="id_color" />
+    </Key>
+    <Property Name="id_color" Type="Int32" Nullable="false" />
+    <Property Name="name_color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Compound">
+    <Key>
+      <PropertyRef Name="id_compound" />
+    </Key>
+    <Property Name="id_compound" Type="Int32" Nullable="false" />
+    <Property Name="name_compound" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Hardware">
+    <Key>
+      <PropertyRef Name="id_hardware" />
+    </Key>
+    <Property Name="id_hardware" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_hardware" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="width" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="length" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="weight" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Hardware_type_hardware">
+    <Key>
+      <PropertyRef Name="id_hardware" />
+      <PropertyRef Name="id_type_hardware" />
+    </Key>
+    <Property Name="id_hardware" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_type_hardware" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="id_items" />
+    </Key>
+    <Property Name="id_items" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="name_items" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="width" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="length" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="hardware" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Ordered_items">
+    <Key>
+      <PropertyRef Name="id_ordered_items" />
+    </Key>
+    <Property Name="id_ordered_items" Type="Int32" Nullable="false" />
+    <Property Name="name_items" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="width" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="length" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="quantity" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Ordered_items_roll">
+    <Key>
+      <PropertyRef Name="id_ordered_items" />
+      <PropertyRef Name="id_roll" />
+    </Key>
+    <Property Name="id_ordered_items" Type="Int32" Nullable="false" />
+    <Property Name="id_roll" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="id_orders" />
+    </Key>
+    <Property Name="id_orders" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="data" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="execution_stage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="customer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="manager" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="price" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="Sewing_FactoryModel.UserOrder" FromRole="Order" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Picture">
+    <Key>
+      <PropertyRef Name="id_picture" />
+    </Key>
+    <Property Name="id_picture" Type="Int32" Nullable="false" />
+    <Property Name="name_picture" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Roll">
+    <Key>
+      <PropertyRef Name="id_roll" />
+    </Key>
+    <Property Name="id_roll" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_compound" Type="Int32" />
+    <Property Name="id_color" Type="Int32" />
+    <Property Name="widht" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="length" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Type_hardware">
+    <Key>
+      <PropertyRef Name="id_type_hardware" />
+    </Key>
+    <Property Name="id_type_hardware" Type="Int32" Nullable="false" />
+    <Property Name="name_type_hardware" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="login" />
+      <PropertyRef Name="password" />
+    </Key>
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="hhhh" />
+    <NavigationProperty Name="Orders" Relationship="Sewing_FactoryModel.UserOrder" FromRole="User" ToRole="Order" />
+  </EntityType>
+  <EntityContainer Name="Sewing_FactoryEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clothes" EntityType="Self.Cloth" />
+    <EntitySet Name="Cloth_color" EntityType="Self.Cloth_color" />
+    <EntitySet Name="Cloth_compound" EntityType="Self.Cloth_compound" />
+    <EntitySet Name="Cloth_picture" EntityType="Self.Cloth_picture" />
+    <EntitySet Name="Colors" EntityType="Self.Color" />
+    <EntitySet Name="Compounds" EntityType="Self.Compound" />
+    <EntitySet Name="Hardwares" EntityType="Self.Hardware" />
+    <EntitySet Name="Hardware_type_hardware" EntityType="Self.Hardware_type_hardware" />
+    <EntitySet Name="Items" EntityType="Self.Item" />
+    <EntitySet Name="Ordered_items" EntityType="Self.Ordered_items" />
+    <EntitySet Name="Ordered_items_roll" EntityType="Self.Ordered_items_roll" />
+    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Pictures" EntityType="Self.Picture" />
+    <EntitySet Name="Rolls" EntityType="Self.Roll" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Type_hardware" EntityType="Self.Type_hardware" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <AssociationSet Name="UserOrder" Association="Sewing_FactoryModel.UserOrder">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="UserOrder">
+    <End Type="Sewing_FactoryModel.User" Role="User" Multiplicity="1" />
+    <End Type="Sewing_FactoryModel.Order" Role="Order" Multiplicity="*" />
+  </Association>
+</Schema>

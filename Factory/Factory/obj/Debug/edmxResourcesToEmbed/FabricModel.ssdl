@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Sewing_FactoryModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Cloth">
+    <Key>
+      <PropertyRef Name="id_cloth" />
+    </Key>
+    <Property Name="id_cloth" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_cloth" Type="varchar" MaxLength="50" />
+    <Property Name="width" Type="varchar" MaxLength="50" />
+    <Property Name="length" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Cloth-color">
+    <Key>
+      <PropertyRef Name="id_cloth" />
+      <PropertyRef Name="id_color" />
+    </Key>
+    <Property Name="id_cloth" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_color" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cloth-compound">
+    <Key>
+      <PropertyRef Name="id_cloth" />
+      <PropertyRef Name="id_compound" />
+    </Key>
+    <Property Name="id_cloth" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_compound" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Cloth-picture">
+    <Key>
+      <PropertyRef Name="id_cloth" />
+      <PropertyRef Name="id_picture" />
+    </Key>
+    <Property Name="id_cloth" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_picture" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Color">
+    <Key>
+      <PropertyRef Name="id_color" />
+    </Key>
+    <Property Name="id_color" Type="int" Nullable="false" />
+    <Property Name="name_color" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Compound">
+    <Key>
+      <PropertyRef Name="id_compound" />
+    </Key>
+    <Property Name="id_compound" Type="int" Nullable="false" />
+    <Property Name="name_compound" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Hardware">
+    <Key>
+      <PropertyRef Name="id_hardware" />
+    </Key>
+    <Property Name="id_hardware" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_hardware" Type="varchar" MaxLength="50" />
+    <Property Name="width" Type="varchar" MaxLength="50" />
+    <Property Name="length" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="varchar" MaxLength="50" />
+    <Property Name="weight" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Hardware-type_hardware">
+    <Key>
+      <PropertyRef Name="id_hardware" />
+      <PropertyRef Name="id_type_hardware" />
+    </Key>
+    <Property Name="id_hardware" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_type_hardware" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Items">
+    <Key>
+      <PropertyRef Name="id_items" />
+    </Key>
+    <Property Name="id_items" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="name_items" Type="varchar" MaxLength="50" />
+    <Property Name="width" Type="varchar" MaxLength="50" />
+    <Property Name="length" Type="varchar" MaxLength="50" />
+    <Property Name="hardware" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ordered_items">
+    <Key>
+      <PropertyRef Name="id_ordered_items" />
+    </Key>
+    <Property Name="id_ordered_items" Type="int" Nullable="false" />
+    <Property Name="name_items" Type="varchar" MaxLength="50" />
+    <Property Name="width" Type="varchar" MaxLength="50" />
+    <Property Name="length" Type="varchar" MaxLength="50" />
+    <Property Name="quantity" Type="int" />
+  </EntityType>
+  <EntityType Name="Ordered_items-roll">
+    <Key>
+      <PropertyRef Name="id_ordered_items" />
+      <PropertyRef Name="id_roll" />
+    </Key>
+    <Property Name="id_ordered_items" Type="int" Nullable="false" />
+    <Property Name="id_roll" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="id_orders" />
+    </Key>
+    <Property Name="id_orders" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="data" Type="varchar" MaxLength="50" />
+    <Property Name="execution_stage" Type="varchar" MaxLength="50" />
+    <Property Name="customer" Type="varchar" MaxLength="50" />
+    <Property Name="manager" Type="varchar" MaxLength="50" />
+    <Property Name="price" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Picture">
+    <Key>
+      <PropertyRef Name="id_picture" />
+    </Key>
+    <Property Name="id_picture" Type="int" Nullable="false" />
+    <Property Name="name_picture" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Roll">
+    <Key>
+      <PropertyRef Name="id_roll" />
+    </Key>
+    <Property Name="id_roll" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="id_compound" Type="int" />
+    <Property Name="id_color" Type="int" />
+    <Property Name="widht" Type="varchar" MaxLength="50" />
+    <Property Name="length" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Type_hardware">
+    <Key>
+      <PropertyRef Name="id_type_hardware" />
+    </Key>
+    <Property Name="id_type_hardware" Type="int" Nullable="false" />
+    <Property Name="name_type_hardware" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="login" />
+      <PropertyRef Name="password" />
+    </Key>
+    <Property Name="login" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="role" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Хранилище Sewing_FactoryModelContainer">
+    <EntitySet Name="Cloth" EntityType="Self.Cloth" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cloth-color" EntityType="Self.Cloth-color" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cloth-compound" EntityType="Self.Cloth-compound" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Cloth-picture" EntityType="Self.Cloth-picture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Color" EntityType="Self.Color" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Compound" EntityType="Self.Compound" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hardware" EntityType="Self.Hardware" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hardware-type_hardware" EntityType="Self.Hardware-type_hardware" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ordered_items" EntityType="Self.Ordered_items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ordered_items-roll" EntityType="Self.Ordered_items-roll" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Picture" EntityType="Self.Picture" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roll" EntityType="Self.Roll" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Type_hardware" EntityType="Self.Type_hardware" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
